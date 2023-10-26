@@ -8,12 +8,9 @@
 </head>
 <body>
     <div class="content">
-        <div class="navbar">
-            <a href="XemThongTinNV.php">Nhân Viên</a>
-            <a href="XemThongTinPB.php">Phòng Ban</a>
-            <a href="timkiem.php">Tìm kiếm</a>
-            <a href="login.php">Đăng nhập</a>
-        </div>
+        <?php 
+            require('navbar.php')
+        ?>
         <div class="search-container">
             <form action="" class="wrap-search">
                 <input class="field-text" type="text" placeholder="ID Nhân viên" id="IDNV" name="IDNV">
