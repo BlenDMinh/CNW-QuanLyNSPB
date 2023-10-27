@@ -28,7 +28,7 @@
                 <label for="MoTa">Mô tả</label>
                 <input class="field-text" name='MoTa' type="text" value="<?php echo $row[2] ?>">
 
-                <input type="submit">
+                <input class="submit-button" type="submit">
             </form>
         </div>
 

@@ -204,7 +204,7 @@ iframe {
 }
 
 .cell {
-    display: table-cell
+    display: table-cell;
 }
 
 @media screen and (max-width: 768px) {
