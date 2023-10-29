@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    $login = $_SESSION['login'] ?? '';
+    if($login != 'admin') {
+        header("Location: XemThongTinPB.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +21,7 @@
         <script>
             function confirm_popup(id) {
                 if(confirm("Bạn có muốn xoá Phòng ban " + id + " không?")) {
-                    window.open("AdminXoaPB.php?IDPBS[]=" + id);
+                    window.open("AdminXoaPB.php?IDPBS[]=" + id, "_self");
                 }
                 return false;
             }

@@ -15,7 +15,7 @@
 
     $ret = [
         'result' => $res,
-        'message' => $res == -1 ? "Định dạng IDPB không đúng" : ($res == 0 ? "IDPB đã có trong Database" : " ")
+        'message' => $res == -1 ? "Định dạng IDPB không đúng" : ($res == 0 ? "IDPB đã có trong Database" : "IDPB chưa có trong Database")
     ];
     echo json_encode($ret, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 ?>

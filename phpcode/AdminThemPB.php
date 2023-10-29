@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    $login = $_SESSION['login'] ?? '';
+    if($login != 'admin') {
+        header("Location: XemThongTinPB.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +46,7 @@
         ?>
         
         <div class="container-table100">
-            <form name="adminPB" action="AdminXuLyThemPB.php" method="GET" class="wrap-search" style="flex-direction: column !important; height: 50%; width: 40%; justify-content: space-between;">
+            <form name="adminPB" action="AdminXuLyThemPB.php" method="POST" class="wrap-search" style="flex-direction: column !important; height: 50%; width: 40%; justify-content: space-between;">
                 <label for="IDPB">ID Phòng ban</label>
                 <input class="field-text" name='IDPB' type="text" onChange="valid_id()">
                 <p id="error"> </p>

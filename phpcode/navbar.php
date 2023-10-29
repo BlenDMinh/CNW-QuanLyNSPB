@@ -1,7 +1,3 @@
-
-<?php 
-    session_start();
-?>
 <div class="navbar">
     <?php
         $login = $_SESSION['login'] ?? '';

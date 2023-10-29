@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    $login = $_SESSION['login'] ?? '';
+    if($login != 'admin') {
+        header("Location: XemThongTinPB.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
