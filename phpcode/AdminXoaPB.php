@@ -1,6 +1,9 @@
 <?php 
     require_once('mysql_util.php');
-    $idpbs = $_REQUEST['IDPBS'];
+    $idpbs = $_REQUEST['IDPBS'] ?? [];
+    if(!$idpbs) {
+        header("Location: AdminThongTinPB.php");
+    }
     $idpbs_sql = "(".implode(",", array_map(function($value) {
         return "'" . $value . "'";
     }, $idpbs)).")";
@@ -16,6 +19,7 @@
     }, $idnvs)).")";
 
     $update_nv_sql = "UPDATE NhanVien SET IDPB=NULL WHERE IDNV IN $idnvs_sql";
+    echo $update_nv_sql;
     $link->query($update_nv_sql);
 
     $sql = "DELETE FROM PhongBan WHERE IDPB IN $idpbs_sql";

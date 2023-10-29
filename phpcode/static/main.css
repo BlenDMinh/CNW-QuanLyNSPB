@@ -175,6 +175,10 @@ iframe {
     background: #5363e1;
 }
 
+.cell.select {
+    width: 100px !important;
+}
+
 @media screen and (max-width: 768px) {
     .row {
         display:block
